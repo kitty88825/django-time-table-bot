@@ -54,7 +54,7 @@ THIRD_PARTY_APPS = [
     "corsheaders",
 ]
 
-LOCAL_APPS = ["app.users", "app.jobs"]
+LOCAL_APPS = ["app.users", "app.jobs", "app.bots"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -201,3 +201,6 @@ SIMPLE_JWT = {
     "ROTATE_REFRESH_TOKENS": True,  # 若為 True，則重新整理後新的 refresh_token 有更新的有效時間
     "UPDATE_LAST_LOGIN": True,  # 若為 True，auth_user 表中的 last_login 欄位在登錄時會更新
 }
+
+# Telegram bot
+TELEGRAM_BOT_TOKEN = env("TELEGRAM_BOT_TOKEN")
