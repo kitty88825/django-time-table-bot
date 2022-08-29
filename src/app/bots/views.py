@@ -6,7 +6,7 @@ from app.bots.bots import webhook_handler
 from core.settings import DEBUG
 
 
-@api_view(["GET"])
+@api_view(["GET", "POST"])
 @permission_classes([])
 def webhook(request):
     if DEBUG:
