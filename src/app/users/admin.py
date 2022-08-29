@@ -14,7 +14,7 @@ class JobInlineAdmin(admin.TabularInline):
 @admin.register(User)
 class User(UserAdmin):
     inlines = (JobInlineAdmin,)
-    list_display = UserAdmin.list_display + ('jobs',)
+    list_display = UserAdmin.list_display + ("jobs",)
 
     def jobs(self, user):
         return user.company.count()
