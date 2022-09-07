@@ -5,7 +5,8 @@ from app.jobs.models import Job, Wage, WorkDay
 
 @admin.register(Job)
 class JobAdmin(admin.ModelAdmin):
-    pass
+    list_display = ("user", "name")
+    list_filter = ("user",)
 
 
 @admin.register(Wage)
